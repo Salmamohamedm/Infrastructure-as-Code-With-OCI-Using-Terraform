@@ -15,7 +15,7 @@ user_id = ""
 
 compartment_id = ""
 
-label_prefix = "dev"
+//label_prefix = "dev"
 
 # vcn parameters
 

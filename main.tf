@@ -1,5 +1,5 @@
 module "vcn" {
-  source  = "oracle-terraform-modules/vcn/oci"
+  source  = "./modules/vcn""
 
   # general oci parameters
   compartment_id = var.compartment_id

@@ -1,5 +1,5 @@
 module "vcn" {
-  source  = "./modules/vcn""
+  source  = "./modules/vcn"
 
   # general oci parameters
   compartment_id = var.compartment_id

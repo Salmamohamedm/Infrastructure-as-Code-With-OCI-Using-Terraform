@@ -36,18 +36,18 @@ vcn_name = "vcn"
 
 lockdown_default_seclist = false
 
-freeform_tags = {
-  environment = "dev"
-  lob = "finance"
-}
+//freeform_tags = {
+//  environment = "dev"
+//  lob = "finance"
+//}
 
-defined_tags = {
-  "Operations.CostCenter" = "42"
-}
+//defined_tags = {
+//  "Operations.CostCenter" = "42"
+//}
 
 # gateways parameters
 
 internet_gateway_display_name = "igw"
 nat_gateway_display_name = "ngw"
 service_gateway_display_name = "sgw"
-attached_drg_id = null
+//attached_drg_id = null

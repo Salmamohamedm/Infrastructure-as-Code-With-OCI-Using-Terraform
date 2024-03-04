@@ -16,3 +16,9 @@ module "vcn" {
   lockdown_default_seclist = var.lockdown_default_seclist
   attached_drg_id          = var.attached_drg_id
 }
+
+module "subnets" {
+  source = "./modules/subnets"
+
+  
+}

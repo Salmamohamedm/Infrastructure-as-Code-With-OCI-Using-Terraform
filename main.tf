@@ -17,8 +17,19 @@ module "vcn" {
   attached_drg_id          = var.attached_drg_id
 }
 
-module "subnets" {
-  source = "./modules/subnets"
+module "subnet" {
+  source = "./modules/subnet"
 
-  
+  compartment_id = var.compartment_id
+  tenancy_id     = var.tenancy_id
+  subnets        = var.subnets
+  enable_ipv6    = var.enable_ipv6
+  vcn_id         = oci_core_vcn.vcn.id
+  ig_route_id    = var.create_internet_gateway ? oci_core_route_table.ig[0].id : null
+  nat_route_id   = var.create_nat_gateway ? oci_core_route_table.nat[0].id : null
+
+  freeform_tags = var.freeform_tags
+
+  count = length(var.subnets) > 0 ? 1 : 0
+
 }

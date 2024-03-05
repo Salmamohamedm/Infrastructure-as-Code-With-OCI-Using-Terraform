@@ -53,3 +53,22 @@ module "Compute" {
   image_id        = "your_image_id"
   display_name    = "ExampleComputeInstance"
 }
+
+
+module "route_table" {
+  source = "./modules/RT"
+
+  compartment_id = var.compartment_id
+  vcn_id         = var.vcn_id
+  display_name   = var.route_table_name
+
+  route_rules = [
+    {
+      destination       = "0.0.0.0/0"
+      network_entity_id = "your_internet_gateway_id"
+    }
+    
+    
+  ]
+}
+

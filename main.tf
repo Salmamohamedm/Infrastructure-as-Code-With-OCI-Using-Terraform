@@ -43,8 +43,8 @@ module "subnet" {
   count = length(var.subnets) > 0 ? 1 : 0
 
 }
-module "compute_instance" {
-  source = "./modules/copute"
+module "Compute" {
+  source = "./modules/Compute"
 
   compartment_id  = "your_compartment_id"
   subnet_id       = "your_subnet_id"

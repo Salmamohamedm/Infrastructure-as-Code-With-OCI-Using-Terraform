@@ -24,9 +24,13 @@ resource "oci_core_security_list" "securitylist" {
     source   = "0.0.0.0/8"
 
     tcp_options {
-      min = 88
+      min = 80
       max = 80
+    }
+
+    tcp_options {
+      min = 22
+      max = 22
     }
   }
 }
-

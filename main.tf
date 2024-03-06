@@ -63,7 +63,7 @@ module "subnet" {
   vcn_id              =  module.vcn.vcn_id
   vcn_cidr            = var.vcn_cidr
   dns_label           = var.dns_label
-  route_table_id      = module.vcn.vcn_id
+  route_table_id      = module.route_table.vcn_id
   security_list_ids   = [oci_core_security_list.securitylist.id]
 }
 

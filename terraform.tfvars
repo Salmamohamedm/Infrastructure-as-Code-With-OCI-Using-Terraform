@@ -11,10 +11,4 @@ ssh_public_keys       = "ssh-rsa <your-public-key>"
 subnet_id             = "your-subnet-id"
 route_table_id        = "your-route-table-id"
 security_list_ids     = ["security-list-id1", "security-list-id2"]
-route_rules = [
-  {
-    destination       = "0.0.0.0/0"
-    network_entity_id = "internet-gateway-id"
-  }
-  
-]
+

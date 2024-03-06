@@ -30,19 +30,15 @@ module "vcn" {
 module "subnet" {
   source = "./modules/subnet"
 
-  compartment_id = var.compartment_id
-  tenancy_id     = var.tenancy_id
-  subnets        = var.subnets
-  enable_ipv6    = var.enable_ipv6
-  vcn_id         = module.vcn.vcn_id
-  ig_route_id    = var.create_internet_gateway ? oci_core_route_table.ig[0].id : null
- // nat_route_id   = var.create_nat_gateway ? oci_core_route_table.nat[0].id : null
-
-  // freeform_tags = var.freeform_tags
-
-  count = length(var.subnets) > 0 ? 1 : 0
-
+  availability_domain = var.availability_domain
+  compartment_id      = var.compartment_ocid
+  vcn_id              =  module.vcn.vcn_id
+  vcn_cidr            = var.vcn_cidr
+  dns_label           = var.dns_label
+  route_table_id      = oci_core_route_table.PublicRT.id
+  security_list_ids   = [oci_core_security_list.securitylist.id]
 }
+
 
 module "internet_gateway" {
   source = "./modules/IGW"

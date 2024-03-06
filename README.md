@@ -1,5 +1,5 @@
 # Deploying Workloads on Oracle Cloud Infrastructure (OCI) via Terraform 
-This repository contains Terraform configurations to deploy workloads on Oracle Cloud Infrastructure (OCI). Terraform is an Infrastructure as Code tool that allows you to define and provision cloud infrastructure using declarative configuration files.
+This repository features meticulously crafted Terraform configurations for deploying diverse workloads on Oracle Cloud Infrastructure (OCI), leveraging the power of Infrastructure as Code (IaC) to enable precise and scalable cloud provisioning.
 
 ![image](https://github.com/Salmamohamedm/Infrastructure-as-Code-With-OCI-Using-Terraform/assets/109488469/8f39feb9-f972-41f7-a7c7-74cc72a987f7)
 # Prerequisites
@@ -60,10 +60,6 @@ Review the list of resources to be destroyed and type "yes" to confirm.
 
 # Additional Resources
 - [Oracle Cloud Infrastructure Documentation](https://docs.oracle.com/en-us/iaas/Content/services.htm)
-
-
-  # Contributing
-  If you encounter any issues or have suggestions for improvements, feel free to open an issue or submit a pull request.
 
 
 

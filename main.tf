@@ -27,17 +27,7 @@ module "vcn" {
   // attached_drg_id          = var.attached_drg_id
 }
 
-module "subnet" {
-  source = "./modules/subnet"
 
-  availability_domain = var.availability_domain
-  compartment_id      = var.compartment_ocid
-  vcn_id              =  module.vcn.vcn_id
-  vcn_cidr            = var.vcn_cidr
-  dns_label           = var.dns_label
-  route_table_id      = oci_core_route_table.PublicRT.id
-  security_list_ids   = [oci_core_security_list.securitylist.id]
-}
 
 
 module "internet_gateway" {
@@ -48,17 +38,6 @@ module "internet_gateway" {
   vcn_dns_label    = var.vcn_dns_label
 }
 
-
-module "compute_instance" {
-  source = "./modules/compute_instance"
-
-  compartment_id      = var.compartment_id
-  shape               = var.shape
-  display_name        = var.display_name
-  availability_domain = var.availability_domain
-  subnet_id           = var.subnet_id
-  ssh_public_key      = var.ssh_public_key
-}
 
 
 module "route_table" {
@@ -76,3 +55,25 @@ module "route_table" {
   ]
 }
 
+module "subnet" {
+  source = "./modules/subnet"
+
+  availability_domain = var.availability_domain
+  compartment_id      = var.compartment_ocid
+  vcn_id              =  module.vcn.vcn_id
+  vcn_cidr            = var.vcn_cidr
+  dns_label           = var.dns_label
+  route_table_id      = oci_core_route_table.PublicRT.id
+  security_list_ids   = [oci_core_security_list.securitylist.id]
+}
+
+module "compute_instance" {
+  source = "./modules/compute_instance"
+
+  compartment_id      = var.compartment_id
+  shape               = var.shape
+  display_name        = var.display_name
+  availability_domain = var.availability_domain
+  subnet_id           = var.subnet_id
+  ssh_public_key      = var.ssh_public_key
+}

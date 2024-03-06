@@ -85,11 +85,7 @@ variable "ssh_public_keys" {
   default     = null
 }
 
-variable "subnet_id" {
-  description = "The OCID of the subnet where the instance will be placed."
-  type        = string
-  default     = "your-default-subnet-ocid"
-}
+
 
 
 # gateways parameters
@@ -100,7 +96,7 @@ variable "internet_gateway_display_name" {
   default     = "igw"
 }
 
-# gateways subnets
+# subnet parameters
 
 variable "subnet_id" {
   description = "Private or Public subnets in a VCN"

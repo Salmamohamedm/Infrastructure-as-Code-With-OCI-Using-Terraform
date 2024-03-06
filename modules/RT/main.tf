@@ -5,6 +5,6 @@ resource "oci_core_route_table" "PublicRT" {
 
   route_rules {
     destination         = "0.0.0.0/0"
-    network_entity_id   = oci_core_internet_gateway.igw.id
+    network_entity_id   = var. network_entity_id 
   }
 }

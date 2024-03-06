@@ -106,5 +106,12 @@ variable "security_list_ids" {
 }
 
 
+# route_table parameters
+
+variable "route_table_name" {
+  type        = string
+  description = "The name of the route table associated with the subnet"
+}
+
 
 

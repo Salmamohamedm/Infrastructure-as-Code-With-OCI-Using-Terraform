@@ -74,6 +74,6 @@ module "compute_instance" {
   shape               = var.shape
   display_name        = var.display_name
   availability_domain = var.availability_domain
-  subnet_id           = module.subnet.vcn_id
+  subnet_id           = module.subnet.subnet_id
   ssh_public_key      = var.ssh_public_key
 }

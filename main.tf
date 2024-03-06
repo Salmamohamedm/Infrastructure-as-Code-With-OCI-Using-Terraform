@@ -34,7 +34,7 @@ module "subnet" {
   tenancy_id     = var.tenancy_id
   subnets        = var.subnets
   enable_ipv6    = var.enable_ipv6
-  vcn_id         = oci_core_vcn.vcn.id
+  vcn_id         = module.vcn.vcn_id
   ig_route_id    = var.create_internet_gateway ? oci_core_route_table.ig[0].id : null
  // nat_route_id   = var.create_nat_gateway ? oci_core_route_table.nat[0].id : null
 
@@ -61,7 +61,7 @@ module "route_table" {
   source = "./modules/RT"
 
   compartment_id = var.compartment_id
-  vcn_id         = var.vcn_id
+  vcn_id         = module.vcn.vcn_id
   display_name   = var.route_table_name
 
   route_rules = [

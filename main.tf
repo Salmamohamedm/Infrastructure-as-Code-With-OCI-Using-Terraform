@@ -35,7 +35,7 @@ module "internet_gateway" {
 
   compartment_id   = var.compartment
   vcn_id           = module.vcn.vcn_id
-  // vcn_dns_label    = var.vcn_dns_label
+  vcn_dns_label    = var.vcn_dns_label
 }
 
 

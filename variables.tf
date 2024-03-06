@@ -90,11 +90,11 @@ variable "ssh_public_keys" {
 
 # gateways parameters
 
-variable "internet_gateway_display_name" {
-  description = "(Updatable) Name of Internet Gateway. Does not have to be unique."
-  type        = string
-  default     = "igw"
-}
+// variable "internet_gateway_display_name" {
+ // description = "(Updatable) Name of Internet Gateway. Does not have to be unique."
+ // type        = string
+ // default     = "igw"
+// }
 
 # subnet parameters
 

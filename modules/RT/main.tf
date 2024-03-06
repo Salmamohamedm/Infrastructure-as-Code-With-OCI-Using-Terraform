@@ -1,6 +1,6 @@
 resource "oci_core_route_table" "PublicRT" {
-  compartment_id = var.compartment_ocid
-  vcn_id         = oci_core_virtual_network.vcn.id
+  compartment_id = var.compartment
+  vcn_id         = var.vcn_id
   display_name   = "${var.vcn_dns_label}-pubrt"
 
   route_rules {

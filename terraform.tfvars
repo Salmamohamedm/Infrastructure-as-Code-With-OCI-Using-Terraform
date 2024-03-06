@@ -1,53 +1,20 @@
-
-# provider identity parameters
-
-api_fingerprint = ""
-
-api_private_key_path = ""
-
-region = "us-phoenix-1"
-
-tenancy_id = ""
-
-user_id = ""
-
-# general oci parameters
-
-compartment_id = ""
-
-//label_prefix = "dev"
-
-# vcn parameters
-
-
-create_internet_gateway = false
-
-create_nat_gateway = false
-
-create_service_gateway = false
-
-enable_ipv6 = false
-
-vcn_cidrs = ["10.0.0.0/16", "172.16.0.0/16", "192.168.0.0/24"]
-
-vcn_dns_label = "vcn"
-
-vcn_name = "vcn"
-
-lockdown_default_seclist = false
-
-//freeform_tags = {
-//  environment = "dev"
-//  lob = "finance"
-//}
-
-//defined_tags = {
-//  "Operations.CostCenter" = "42"
-//}
-
-# gateways parameters
-
-internet_gateway_display_name = "igw"
-nat_gateway_display_name = "ngw"
-service_gateway_display_name = "sgw"
-//attached_drg_id = null
+api_fingerprint       = "your-api-fingerprint"
+api_private_key_path  = "/path/to/your/api/private/key.pem"
+region                = "your-oci-region"
+tenancy_id            = "your-tenancy-id"
+user_id               = "your-user-id"
+compartment_id        = "your-compartment-id"
+availability_domain   = "your-availability-domain"
+display_name          = "your-instance-display-name"
+shape                 = "VM.Standard.E3.Flex"
+ssh_public_keys       = "ssh-rsa <your-public-key>"
+subnet_id             = "your-subnet-id"
+route_table_id        = "your-route-table-id"
+security_list_ids     = ["security-list-id1", "security-list-id2"]
+route_rules = [
+  {
+    destination       = "0.0.0.0/0"
+    network_entity_id = "internet-gateway-id"
+  }
+  
+]

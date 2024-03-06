@@ -44,6 +44,15 @@ module "subnet" {
 
 }
 
+module "internet_gateway" {
+  source = "./modules/internet_gateway"
+
+  compartment_id   = var.compartment_ocid
+  vcn_id           = oci_core_virtual_network.vcn.id
+  vcn_dns_label    = var.vcn_dns_label
+}
+
+
 module "compute_instance" {
   source = "./modules/compute_instance"
 

@@ -42,7 +42,7 @@ variable "compartment_id" {
 # vcn parameters
 
 
-variable "vcn_cidr" {
+variable "vcn_cidrs" {
   description = "The list of IPv4 CIDR blocks the VCN will use."
   type        = list(string)
   default     = ["10.0.0.0/16", "172.16.0.0/16", "192.168.0.0/24"]
@@ -86,15 +86,6 @@ variable "ssh_public_keys" {
 }
 
 
-
-
-# gateways parameters
-
-// variable "internet_gateway_display_name" {
- // description = "(Updatable) Name of Internet Gateway. Does not have to be unique."
- // type        = string
- // default     = "igw"
-// }
 
 # subnet parameters
 

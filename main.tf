@@ -56,7 +56,6 @@ module "compute_instance" {
 }
 
 
-
 module "route_table" {
   source = "./modules/RT"
 
@@ -67,10 +66,8 @@ module "route_table" {
   route_rules = [
     {
       destination       = "0.0.0.0/0"
-      network_entity_id = "your_internet_gateway_id"
+      network_entity_id = module.vcn.internet_gateway_id
     }
-    
-    
   ]
 }
 

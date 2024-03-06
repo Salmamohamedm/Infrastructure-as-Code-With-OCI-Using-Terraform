@@ -45,10 +45,10 @@ module "subnet" {
 }
 
 module "internet_gateway" {
-  source = "./modules/internet_gateway"
+  source = "./modules/IGW"
 
   compartment_id   = var.compartment_ocid
-  vcn_id           = oci_core_virtual_network.vcn.id
+  vcn_id           = module.vcn.vcn_id
   vcn_dns_label    = var.vcn_dns_label
 }
 
@@ -75,7 +75,7 @@ module "route_table" {
   route_rules = [
     {
       destination       = "0.0.0.0/0"
-      network_entity_id = module.vcn.internet_gateway_id
+      network_entity_id = module.internet_gateway.internet_gateway_id
     }
   ]
 }

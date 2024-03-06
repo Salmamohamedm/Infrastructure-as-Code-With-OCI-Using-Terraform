@@ -15,5 +15,12 @@ Before you begin, ensure you have the following:
     -  Configure variables that need to be defined in terraform.tfvar file.
 3.   [terraform.tfvars](terraform.tfvars)
      - Provide values for the required variables
+4. [modules](modules)
+    - a modules file is a directory containing reusable configurations encapsulating resources, facilitating modularization and reusability in infrastructure as code deployments.
+
+
+
+
+
 
 

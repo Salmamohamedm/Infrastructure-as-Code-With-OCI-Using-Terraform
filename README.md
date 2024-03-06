@@ -16,7 +16,7 @@ Before you begin, ensure you have the following:
 3.   [terraform.tfvars](terraform.tfvars)
      - Provide values for the required variables
 4. [modules](modules)
-    - a modules file is a directory containing reusable configurations encapsulating resources, facilitating modularization and reusability in infrastructure as code deployments.
+    - a modules file is a directory containing reusable configurations encapsulating resources and modularization in infrastructure as code deployments.
 
 
 

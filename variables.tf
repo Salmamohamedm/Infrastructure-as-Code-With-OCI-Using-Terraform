@@ -87,23 +87,6 @@ variable "ssh_public_keys" {
 
 
 
-# subnet parameters
-
-variable "subnet_id" {
-  description = "Private or Public subnets in a VCN"
-  type        = any
-  default     = {}
-}
-
-variable "route_table_id" {
-  description = "The OCID of the route table associated with the subnet."
-  type        = string
-}
-
-variable "security_list_ids" {
-  description = "A list of security list OCIDs to associate with the subnet."
-  type        = list(string)
-}
 
 
 # route_table parameters

@@ -56,10 +56,10 @@ module "route_table" {
 }
 
 module "security_list" {
-  source = "./modules/"
+  source = "./modules/SL"
 
-  compartment_id = var.compartment_ocid
-  vcn_id         = oci_core_virtual_network.vcn.id
+  compartment_id = var.compartment
+  vcn_id         = module.vcn.vcn_id
 }
 
 
@@ -67,12 +67,12 @@ module "subnet" {
   source = "./modules/subnet"
 
   availability_domain = var.availability_domain
-  compartment_id      = var.compartment_ocid
+  compartment_id      = var.compartment
   vcn_id              = module.vcn.vcn_id
   vcn_cidr            = var.vcn_cidr
   dns_label           = var.dns_label
   route_table_id      = module.route_table.route_table_id
-  security_list_ids   = [oci_core_security_list.securitylist.id]
+  security_list_ids   = module.security_list.security_list_id
 }
 
 module "compute_instance" {

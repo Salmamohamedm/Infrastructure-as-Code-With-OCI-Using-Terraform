@@ -33,9 +33,9 @@ module "vcn" {
 module "internet_gateway" {
   source = "./modules/IGW"
 
-  compartment_id   = var.compartment_ocid
+  compartment_id   = var.compartment
   vcn_id           = module.vcn.vcn_id
-  vcn_dns_label    = var.vcn_dns_label
+  // vcn_dns_label    = var.vcn_dns_label
 }
 
 

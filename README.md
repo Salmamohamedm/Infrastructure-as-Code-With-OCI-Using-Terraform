@@ -9,10 +9,10 @@ Before you begin, ensure you have the following:
 3. Oracle Cloud Infrastructure (OCI) Terraform Provider. Installation instructions can be found [here](https://registry.terraform.io/providers/oracle/oci/latest/docs).
 
 # Overview
-1. [main.tf](Terraform-Project/main.tf)
+1. [main.tf](main.tf)
    - Define the cloud provider, Call terraform modules.
 2. [variables.tf](Terraform-Project/main.tf)
     -  Configure variables that need to be defined in terraform.tfvar file.
-3.   [terraform.tfvars](Terraform-Project/terraform.tfvars)
+3.   [terraform.tfvars](terraform.tfvars)
      - Provide values for the required variables
 

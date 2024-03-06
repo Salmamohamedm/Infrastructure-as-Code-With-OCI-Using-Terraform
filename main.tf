@@ -55,6 +55,14 @@ module "route_table" {
   ]
 }
 
+module "security_list" {
+  source = "./modules/"
+
+  compartment_id = var.compartment_ocid
+  vcn_id         = oci_core_virtual_network.vcn.id
+}
+
+
 module "subnet" {
   source = "./modules/subnet"
 

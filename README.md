@@ -37,6 +37,7 @@ cd Infrastructure-as-Code-With-OCI-Using-Terraform
 # Deployment
 To deploy the workloads on OCI, follow these steps:
 1. Initialize the Terraform configuration:
+
 ```
 terraform init
 ```

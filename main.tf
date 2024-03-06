@@ -46,13 +46,8 @@ module "route_table" {
   compartment_id = var.compartment_id
   vcn_id         = module.vcn.vcn_id
   display_name   = var.route_table_name
-
-  route_rules = [
-    {
-      destination       = "0.0.0.0/0"
-      network_entity_id = module.internet_gateway.internet_gateway_id
-    }
-  ]
+  network_entity_id = module.internet_gateway.internet_gateway_id
+    
 }
 
 module "security_list" {

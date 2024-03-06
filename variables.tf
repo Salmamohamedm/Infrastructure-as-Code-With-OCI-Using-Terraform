@@ -113,3 +113,13 @@ variable "security_list_ids" {
   description = "A list of security list OCIDs to associate with the subnet."
   type        = list(string)
 }
+
+#  Route table parameters
+
+variable "route_rules" {
+  description = "A list of route rules."
+  type = list(object({
+    destination       = string
+    network_entity_id = string
+  }))
+}

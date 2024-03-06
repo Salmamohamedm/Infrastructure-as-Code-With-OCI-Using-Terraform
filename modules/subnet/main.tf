@@ -6,6 +6,6 @@ resource "oci_core_subnet" "subnet" {
   display_name        = var.dns_label
  // dns_label           = var.dns_label
   route_table_id      = var.route_table_id
-  security_list_ids   = [var.subnet_security_list_ids]
+  security_list_ids   = [var.security_list_id]
 }
 

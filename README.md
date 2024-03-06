@@ -19,6 +19,14 @@ Before you begin, ensure you have the following:
     - a modules file is a directory containing reusable configurations encapsulating resources and modularization in infrastructure as code deployments.
 
 
+# Configuration
+1. Clone this repository to your local machine:
+
+```
+git clone
+```
+
+
 
 
 

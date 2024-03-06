@@ -29,7 +29,24 @@ git clone https://github.com/Salmamohamedm/Infrastructure-as-Code-With-OCI-Using
 ```
 cd Infrastructure-as-Code-With-OCI-Using-Terraform
 ```
+3. Update the terraform.tfvars file with your OCI credentials and other configuration settings.
+4. Review and customize the Terraform configuration files (*.tf) as needed for your specific workloads.
 
+# Deployment
+To deploy the workloads on OCI, follow these steps:
+1. Initialize the Terraform configuration:
+```
+terraform init
+```
+2. View the execution plan to ensure everything will be created as expected:
+```
+terraform plan
+```
+3. Apply the Terraform configuration to create the resources:
+```
+terraform apply
+```
+4. Review the proposed changes and type "yes" to confirm the deployment.
 
 
 

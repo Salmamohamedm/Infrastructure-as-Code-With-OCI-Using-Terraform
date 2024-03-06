@@ -39,10 +39,6 @@ variable "compartment_id" {
 }
 
 
-
-
-
-
 # vcn parameters
 
 
@@ -64,9 +60,39 @@ variable "vcn_name" {
   default     = "vcn"
 }
 
+# compute instance parameters
+
+variable "availability_domain" {
+  description = "The availability domain where the instance will be launched."
+  type        = string
+}
+
+variable "display_name" {
+  description = "The display name of the instance."
+  type        = string
+}
+
+
+variable "shape" {
+  description = "The shape of an instance."
+  type        = string
+  default     = "VM.Standard.E3.Flex"
+}
+
+variable "ssh_public_keys" {
+  description = "Public SSH keys to be included in the ~/.ssh/authorized_keys file for the default user on the instance. To provide multiple keys, see docs/instance_ssh_keys.adoc."
+  type        = string
+  default     = null
+}
+
+variable "subnet_id" {
+  description = "The OCID of the subnet where the instance will be placed."
+  type        = string
+  default     = "your-default-subnet-ocid"
+}
+
+
 # gateways parameters
-
-
 
 variable "internet_gateway_display_name" {
   description = "(Updatable) Name of Internet Gateway. Does not have to be unique."
@@ -74,3 +100,10 @@ variable "internet_gateway_display_name" {
   default     = "igw"
 }
 
+# gateways subnets
+
+variable "subnet_id" {
+  description = "Private or Public subnets in a VCN"
+  type        = any
+  default     = {}
+}

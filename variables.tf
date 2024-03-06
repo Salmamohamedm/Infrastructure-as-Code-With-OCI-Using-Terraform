@@ -114,12 +114,6 @@ variable "security_list_ids" {
   type        = list(string)
 }
 
-#  Route table parameters
 
-variable "route_rules" {
-  description = "A list of route rules."
-  type = list(object({
-    destination       = string
-    network_entity_id = string
-  }))
-}
+
+

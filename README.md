@@ -48,6 +48,24 @@ terraform apply
 ```
 4. Review the proposed changes and type "yes" to confirm the deployment.
 
+# Accessing Resources
+Once the deployment is complete, you can access your OCI resources using the OCI Console
+
+# Cleanup
+To avoid incurring unnecessary costs, it's essential to clean up the resources when they are no longer needed. To do so, run:
+```
+terraform destroy
+```
+Review the list of resources to be destroyed and type "yes" to confirm.
+
+# Additional Resources
+- [Oracle Cloud Infrastructure Documentation](https://docs.oracle.com/en-us/iaas/Content/services.htm)
+
+
+  # Contributing
+  If you encounter any issues or have suggestions for improvements, feel free to open an issue or submit a pull request.
+
+
 
 
 

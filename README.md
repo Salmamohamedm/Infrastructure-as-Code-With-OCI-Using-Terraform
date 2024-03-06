@@ -7,3 +7,5 @@ Before you begin, ensure you have the following:
 1. An Oracle Cloud Infrastructure (OCI) account. You can sign up [here](https://www.oracle.com/cloud/sign-in.html).
 2. Terraform installed on your local machine.
 3. Oracle Cloud Infrastructure (OCI) Terraform Provider. Installation instructions can be found [here](https://registry.terraform.io/providers/oracle/oci/latest/docs).
+
+# Overview

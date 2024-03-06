@@ -65,7 +65,7 @@ module "subnet" {
   compartment_id      = var.compartment
   vcn_id              = module.vcn.vcn_id
   vcn_cidr            = var.vcn_cidr
-  dns_label           = var.dns_label
+ // dns_label           = var.dns_label
   route_table_id      = module.route_table.route_table_id
   security_list_ids   = module.security_list.security_list_id
 }

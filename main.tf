@@ -60,7 +60,7 @@ module "subnet" {
 
   availability_domain = var.availability_domain
   compartment_id      = var.compartment_ocid
-  vcn_id              =  module.vcn.vcn_id
+  vcn_id              = module.vcn.vcn_id
   vcn_cidr            = var.vcn_cidr
   dns_label           = var.dns_label
   route_table_id      = module.route_table.route_table_id

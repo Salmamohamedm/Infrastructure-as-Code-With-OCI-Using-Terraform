@@ -38,58 +38,13 @@ variable "compartment_id" {
  
 }
 
-variable "label_prefix" {
-  description = "a string that will be prepended to all resources"
-  type        = string
-  default     = "terraform-oci"
-}
 
-variable "freeform_tags" {
-  description = "simple key-value pairs to tag the created resources using freeform OCI Free-form tags."
-  type        = map(any)
-  default = {
-    terraformed = "please do not edit manually"
-    module      = "oracle-terraform-modules/vcn/oci"
-  }
-}
 
-variable "defined_tags" {
-  description = "predefined and scoped to a namespace to tag the resources created using defined tags."
-  type        = map(string)
-  default     = null
-}
+
+
 
 # vcn parameters
 
-variable "create_internet_gateway" {
-  description = "whether to create the internet gateway"
-  type        = bool
-  default     = false
-}
-
-variable "create_nat_gateway" {
-  description = "whether to create a nat gateway in the vcn"
-  type        = bool
-  default     = false
-}
-
-variable "create_service_gateway" {
-  description = "whether to create a service gateway"
-  type        = bool
-  default     = false
-}
-
-variable "enable_ipv6" {
-  description = "Whether IPv6 is enabled for the VCN. If enabled, Oracle will assign the VCN a IPv6 /56 CIDR block."
-  type        = bool
-  default     = false
-}
-
-variable "lockdown_default_seclist" {
-  description = "whether to remove all default security rules from the VCN Default Security List"
-  type        = bool
-  default     = false
-}
 
 variable "vcn_cidrs" {
   description = "The list of IPv4 CIDR blocks the VCN will use."
@@ -111,11 +66,6 @@ variable "vcn_name" {
 
 # gateways parameters
 
-variable "attached_drg_id" {
-  description = "the ID of DRG attached to the VCN"
-  type        = string
-  default     = null
-}
 
 
 variable "internet_gateway_display_name" {
@@ -124,14 +74,3 @@ variable "internet_gateway_display_name" {
   default     = "igw"
 }
 
-variable "nat_gateway_display_name" {
-  description = "(Updatable) Name of NAT Gateway. Does not have to be unique."
-  type        = string
-  default     = "ngw"
-}
-
-variable "service_gateway_display_name" {
-  description = "(Updatable) Name of Service Gateway. Does not have to be unique."
-  type        = string
-  default     = "sgw"
-}
